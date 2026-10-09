@@ -2,13 +2,10 @@
 <html lang="ka">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#080607">
 <meta name="color-scheme" content="dark">
-
-<title>ერთი რამ უნდა გითხრა — დემეტრე × ნინო</title>
+<title>ერთი რამ უნდა გითხრა - ელენე ! </title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
@@ -31,16 +28,9 @@
     --ease:cubic-bezier(.22,.61,.36,1);
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-    background:var(--black);
-    scroll-behavior:smooth;
-}
+html{background:var(--black);scroll-behavior:smooth}
 
 body{
     margin:0;
@@ -52,30 +42,18 @@ body{
     text-rendering:optimizeLegibility;
 }
 
-body.locked{
-    overflow:hidden;
-}
+body.locked{overflow:hidden}
 
-button{
-    font-family:inherit;
-}
+button{font-family:inherit}
 
-button,
-a,
-[role="button"]{
-    -webkit-tap-highlight-color:transparent;
-}
+button,a,[role="button"]{-webkit-tap-highlight-color:transparent}
 
-button:focus-visible,
-[role="button"]:focus-visible{
+button:focus-visible,[role="button"]:focus-visible{
     outline:1px solid var(--gold);
     outline-offset:5px;
 }
 
-/* =========================================================
-   INTRO
-========================================================= */
-
+/* INTRO */
 #intro{
     position:fixed;
     inset:0;
@@ -85,9 +63,7 @@ button:focus-visible,
     justify-content:center;
     align-items:center;
     overflow:hidden;
-    transition:
-        opacity 1.3s var(--ease),
-        visibility 1.3s var(--ease);
+    transition:opacity 1.3s var(--ease),visibility 1.3s var(--ease);
 }
 
 #intro::before{
@@ -102,25 +78,14 @@ button:focus-visible,
     filter:blur(80px);
 }
 
-#intro.hide{
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
 
 .intro-noise{
     position:absolute;
     inset:0;
     opacity:.025;
     pointer-events:none;
-    background-image:
-        repeating-linear-gradient(
-            0deg,
-            rgba(255,255,255,.7) 0,
-            rgba(255,255,255,.7) 1px,
-            transparent 1px,
-            transparent 4px
-        );
+    background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.7) 0,rgba(255,255,255,.7) 1px,transparent 1px,transparent 4px);
 }
 
 .intro-scene{
@@ -129,15 +94,10 @@ button:focus-visible,
     text-align:center;
     opacity:0;
     transform:translateY(22px);
-    transition:
-        opacity 1.1s var(--ease),
-        transform 1.1s var(--ease);
+    transition:opacity 1.1s var(--ease),transform 1.1s var(--ease);
 }
 
-.intro-scene.active{
-    opacity:1;
-    transform:translateY(0);
-}
+.intro-scene.active{opacity:1;transform:translateY(0)}
 
 .intro-small{
     color:rgba(199,164,119,.7);
@@ -154,9 +114,7 @@ button:focus-visible,
     font-weight:400;
 }
 
-.intro-main em{
-    color:var(--gold);
-}
+.intro-main em{color:var(--gold)}
 
 .intro-progress{
     position:absolute;
@@ -169,47 +127,25 @@ button:focus-visible,
     overflow:hidden;
 }
 
-.intro-progress span{
-    display:block;
-    height:100%;
-    width:0;
-    background:var(--gold);
-}
+.intro-progress span{display:block;height:100%;width:0;background:var(--gold)}
 
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-section{
-    position:relative;
-}
+/* GLOBAL */
+section{position:relative}
 
 .section{
     min-height:100svh;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:
-        max(80px,env(safe-area-inset-top))
-        22px
-        max(80px,env(safe-area-inset-bottom));
+    padding:max(80px,env(safe-area-inset-top)) 22px max(80px,env(safe-area-inset-bottom));
     overflow:hidden;
 }
 
-.container{
-    position:relative;
-    z-index:3;
-    width:min(100%,1000px);
-    margin:auto;
-}
+.container{position:relative;z-index:3;width:min(100%,1000px);margin:auto}
 
-.center{
-    text-align:center;
-}
+.center{text-align:center}
 
-.serif{
-    font-family:var(--serif);
-}
+.serif{font-family:var(--serif)}
 
 .eyebrow{
     color:var(--gold);
@@ -223,42 +159,18 @@ section{
 .reveal{
     opacity:0;
     transform:translateY(35px);
-    transition:
-        opacity 1.05s var(--ease),
-        transform 1.05s var(--ease);
+    transition:opacity 1.05s var(--ease),transform 1.05s var(--ease);
 }
 
-.reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-}
+.reveal.visible{opacity:1;transform:translateY(0)}
 
-.fade{
-    opacity:0;
-    transition:opacity 1.1s var(--ease);
-}
+.fade{opacity:0;transition:opacity 1.1s var(--ease)}
+.fade.visible{opacity:1}
 
-.fade.visible{
-    opacity:1;
-}
+.line{width:70px;height:1px;background:var(--gold-soft);margin:25px auto}
 
-.line{
-    width:70px;
-    height:1px;
-    background:var(--gold-soft);
-    margin:25px auto;
-}
-
-/* =========================================================
-   AMBIENT
-========================================================= */
-
-.ambient{
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-}
+/* AMBIENT */
+.ambient{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 
 .ambient-glow{
     position:absolute;
@@ -269,15 +181,8 @@ section{
     filter:blur(80px);
 }
 
-.glow-left{
-    left:-280px;
-    top:15%;
-}
-
-.glow-right{
-    right:-280px;
-    bottom:10%;
-}
+.glow-left{left:-280px;top:15%}
+.glow-right{right:-280px;bottom:10%}
 
 .particle{
     position:absolute;
@@ -289,22 +194,13 @@ section{
 }
 
 @keyframes particleFloat{
-    0%{
-        opacity:0;
-        transform:translate3d(0,30px,0);
-    }
+    0%{opacity:0;transform:translate3d(0,30px,0)}
     15%{opacity:.5}
     75%{opacity:.3}
-    100%{
-        opacity:0;
-        transform:translate3d(25px,-120px,0);
-    }
+    100%{opacity:0;transform:translate3d(25px,-120px,0)}
 }
 
-/* =========================================================
-   MUSIC
-========================================================= */
-
+/* MUSIC */
 .music-control{
     position:fixed;
     right:18px;
@@ -351,32 +247,17 @@ section{
     border-radius:50%;
 }
 
-.music-control.playing .music-disc{
-    animation:spin 3s linear infinite;
-}
+.music-control.playing .music-disc{animation:spin 3s linear infinite}
 
-@keyframes spin{
-    to{transform:rotate(360deg)}
-}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-/* =========================================================
-   SCENE 01 — HERO
-========================================================= */
-
+/* SCENE 01 HERO */
 .hero{
     min-height:100svh;
-    background:
-        radial-gradient(
-            circle at 50% 48%,
-            rgba(120,24,40,.13),
-            transparent 38%
-        ),
-        var(--black);
+    background:radial-gradient(circle at 50% 48%,rgba(120,24,40,.13),transparent 38%),var(--black);
 }
 
-.hero-content{
-    text-align:center;
-}
+.hero-content{text-align:center}
 
 .hero-kicker{
     font-size:10px;
@@ -393,10 +274,7 @@ section{
     font-weight:400;
 }
 
-.hero-title em{
-    display:block;
-    color:var(--red2);
-}
+.hero-title em{display:block;color:var(--red2)}
 
 .hero-description{
     width:min(100%,520px);
@@ -423,36 +301,18 @@ section{
 .scroll-bar{
     width:1px;
     height:48px;
-    background:linear-gradient(
-        to bottom,
-        var(--gold),
-        transparent
-    );
+    background:linear-gradient(to bottom,var(--gold),transparent);
     animation:scrollMove 2.2s ease-in-out infinite;
 }
 
 @keyframes scrollMove{
-    0%,100%{
-        transform:scaleY(.5);
-        transform-origin:top;
-    }
-    50%{
-        transform:scaleY(1);
-        transform-origin:top;
-    }
+    0%,100%{transform:scaleY(.5);transform-origin:top}
+    50%{transform:scaleY(1);transform-origin:top}
 }
 
-/* =========================================================
-   SCENE 02 — WHY
-========================================================= */
-
-.why{
-    background:#0b0809;
-}
-
-.full-text{
-    text-align:center;
-}
+/* SCENE 02 WHY */
+.why{background:#0b0809}
+.full-text{text-align:center}
 
 .full-text .line-text{
     font-family:var(--serif);
@@ -461,31 +321,12 @@ section{
     margin:35px 0;
 }
 
-.full-text .dim{
-    color:rgba(246,238,229,.35);
-    font-size:clamp(20px,5vw,43px);
-}
+.full-text .dim{color:rgba(246,238,229,.35);font-size:clamp(20px,5vw,43px)}
+.gold-text{color:var(--gold)}
 
-.gold-text{
-    color:var(--gold);
-}
-
-/* =========================================================
-   SCENE 03 — BEFORE
-========================================================= */
-
-.before{
-    background:
-        linear-gradient(
-            180deg,
-            #0b0809,
-            #10090b
-        );
-}
-
-.before-inner{
-    text-align:center;
-}
+/* SCENE 03 BEFORE */
+.before{background:linear-gradient(180deg,#0b0809,#10090b)}
+.before-inner{text-align:center}
 
 .before-title{
     font-family:var(--serif);
@@ -494,10 +335,7 @@ section{
     margin-bottom:55px;
 }
 
-.before-list{
-    width:min(100%,580px);
-    margin:auto;
-}
+.before-list{width:min(100%,580px);margin:auto}
 
 .before-item{
     display:flex;
@@ -508,16 +346,9 @@ section{
     color:rgba(246,238,229,.45);
 }
 
-.before-number{
-    color:var(--gold);
-    font-size:9px;
-    letter-spacing:.2em;
-}
+.before-number{color:var(--gold);font-size:9px;letter-spacing:.2em}
 
-.before-item span:last-child{
-    font-family:var(--serif);
-    font-size:22px;
-}
+.before-item span:last-child{font-family:var(--serif);font-size:22px}
 
 .before-end{
     margin-top:55px;
@@ -526,13 +357,8 @@ section{
     line-height:1.4;
 }
 
-/* =========================================================
-   SCENE 04 — YOU
-========================================================= */
-
-.you{
-    background:#090607;
-}
+/* SCENE 04 YOU */
+.you{background:#090607}
 
 .you-title{
     font-family:var(--serif);
@@ -541,9 +367,7 @@ section{
     text-align:center;
 }
 
-.you-title em{
-    color:var(--red2);
-}
+.you-title em{color:var(--red2)}
 
 .you-copy{
     max-width:680px;
@@ -561,18 +385,10 @@ section{
     font-size:clamp(28px,6vw,55px);
 }
 
-/* =========================================================
-   SCENE 05 — DETAILS
-========================================================= */
+/* SCENE 05 DETAILS */
+.details{background:#0e080a}
 
-.details{
-    background:#0e080a;
-}
-
-.details-header{
-    text-align:center;
-    margin-bottom:45px;
-}
+.details-header{text-align:center;margin-bottom:45px}
 
 .details-header h2{
     font-family:var(--serif);
@@ -598,9 +414,7 @@ section{
     transition:background .45s ease;
 }
 
-.detail-card:hover{
-    background:#160b0e;
-}
+.detail-card:hover{background:#160b0e}
 
 .detail-card::after{
     content:"";
@@ -613,15 +427,9 @@ section{
     transition:width .5s var(--ease);
 }
 
-.detail-card:hover::after{
-    width:100%;
-}
+.detail-card:hover::after{width:100%}
 
-.detail-num{
-    color:var(--gold);
-    font-size:9px;
-    letter-spacing:.25em;
-}
+.detail-num{color:var(--gold);font-size:9px;letter-spacing:.25em}
 
 .detail-card h3{
     font-family:var(--serif);
@@ -643,37 +451,18 @@ section{
     opacity:0;
     transform:translateY(20px);
     pointer-events:none;
-    transition:
-        opacity .45s var(--ease),
-        transform .45s var(--ease);
+    transition:opacity .45s var(--ease),transform .45s var(--ease);
 }
 
-.detail-card.open p{
-    opacity:1;
-    transform:translateY(0);
-}
+.detail-card.open p{opacity:1;transform:translateY(0)}
+.detail-card.open h3{opacity:0}
 
-.detail-card.open h3{
-    opacity:0;
-}
-
-/* =========================================================
-   SCENE 06 — WHEN
-========================================================= */
-
+/* SCENE 06 WHEN */
 .when{
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(143,38,53,.11),
-            transparent 40%
-        ),
-        #080607;
+    background:radial-gradient(circle at center,rgba(143,38,53,.11),transparent 40%),#080607;
 }
 
-.when-inner{
-    text-align:center;
-}
+.when-inner{text-align:center}
 
 .when-question{
     font-family:var(--serif);
@@ -690,10 +479,7 @@ section{
     background:transparent;
     cursor:pointer;
     font-size:12px;
-    transition:
-        background .35s ease,
-        transform .35s ease,
-        border-color .35s ease;
+    transition:background .35s ease,transform .35s ease,border-color .35s ease;
 }
 
 .pill-button:hover{
@@ -714,22 +500,11 @@ section{
     transition:.9s var(--ease);
 }
 
-.when-answer.show{
-    opacity:1;
-    transform:translateY(0);
-}
+.when-answer.show{opacity:1;transform:translateY(0)}
 
-/* =========================================================
-   SCENE 07 — MOMENTS
-========================================================= */
-
-.moments{
-    background:#10090b;
-}
-
-.moments-inner{
-    text-align:center;
-}
+/* SCENE 07 MOMENTS */
+.moments{background:#10090b}
+.moments-inner{text-align:center}
 
 .moments-title{
     font-family:var(--serif);
@@ -737,57 +512,28 @@ section{
     margin-bottom:60px;
 }
 
-.moment-stack{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:17px;
-}
+.moment-stack{display:flex;flex-direction:column;align-items:center;gap:17px}
 
 .moment{
     font-family:var(--serif);
     font-size:clamp(25px,6vw,48px);
     color:rgba(246,238,229,.23);
-    transition:
-        color .7s ease,
-        transform .7s var(--ease);
+    transition:color .7s ease,transform .7s var(--ease);
 }
 
-.moment.active{
-    color:var(--cream);
-    transform:scale(1.05);
-}
+.moment.active{color:var(--cream);transform:scale(1.05)}
+.moment.final{color:var(--red2)}
 
-.moment.final{
-    color:var(--red2);
-}
-
-/* =========================================================
-   SCENE 08 — LETTER
-========================================================= */
-
-.letter-section{
-    background:#eaded2;
-    color:#1a1113;
-}
-
-.letter-wrapper{
-    width:min(100%,760px);
-    margin:auto;
-}
-
-.letter-label{
-    color:#7e2836;
-    text-align:center;
-}
+/* SCENE 08 LETTER */
+.letter-section{background:#eaded2;color:#1a1113}
+.letter-wrapper{width:min(100%,760px);margin:auto}
+.letter-label{color:#7e2836;text-align:center}
 
 .letter-paper{
     position:relative;
     background:#faf3e9;
     padding:clamp(32px,8vw,80px);
-    box-shadow:
-        0 40px 100px rgba(0,0,0,.22),
-        0 1px 0 rgba(255,255,255,.7) inset;
+    box-shadow:0 40px 100px rgba(0,0,0,.22),0 1px 0 rgba(255,255,255,.7) inset;
 }
 
 .letter-paper::before,
@@ -799,19 +545,8 @@ section{
     border:1px solid rgba(126,40,54,.22);
 }
 
-.letter-paper::before{
-    top:15px;
-    left:15px;
-    border-right:0;
-    border-bottom:0;
-}
-
-.letter-paper::after{
-    right:15px;
-    bottom:15px;
-    border-left:0;
-    border-top:0;
-}
+.letter-paper::before{top:15px;left:15px;border-right:0;border-bottom:0}
+.letter-paper::after{right:15px;bottom:15px;border-left:0;border-top:0}
 
 .letter-paper h2{
     font-family:var(--serif);
@@ -828,10 +563,7 @@ section{
     margin-bottom:25px;
 }
 
-.letter-paper .accent{
-    color:#8d2635;
-    font-weight:600;
-}
+.letter-paper .accent{color:#8d2635;font-weight:600}
 
 .letter-signature{
     font-family:var(--serif);
@@ -840,17 +572,9 @@ section{
     margin-top:48px;
 }
 
-/* =========================================================
-   SCENE 09 — CHOOSE
-========================================================= */
-
-.choose{
-    background:#0a0708;
-}
-
-.choose-inner{
-    text-align:center;
-}
+/* SCENE 09 CHOOSE */
+.choose{background:#0a0708}
+.choose-inner{text-align:center}
 
 .choose-title{
     font-family:var(--serif);
@@ -883,14 +607,8 @@ section{
     transition:.35s ease;
 }
 
-.choice:hover{
-    border-color:var(--gold);
-}
-
-.choice.selected{
-    background:var(--red);
-    border-color:var(--red);
-}
+.choice:hover{border-color:var(--gold)}
+.choice.selected{background:var(--red);border-color:var(--red)}
 
 .choice-result{
     margin-top:35px;
@@ -909,22 +627,11 @@ section{
     transition:.9s var(--ease);
 }
 
-.choose-final.show{
-    opacity:1;
-    transform:translateY(0);
-}
+.choose-final.show{opacity:1;transform:translateY(0)}
 
-/* =========================================================
-   SCENE 10 — PAUSE
-========================================================= */
-
-.pause{
-    background:#040304;
-}
-
-.pause-inner{
-    text-align:center;
-}
+/* SCENE 10 PAUSE */
+.pause{background:#040304}
+.pause-inner{text-align:center}
 
 .pause-line{
     font-family:var(--serif);
@@ -933,15 +640,10 @@ section{
     margin:28px 0;
     opacity:0;
     transform:translateY(20px);
-    transition:
-        opacity 1.2s var(--ease),
-        transform 1.2s var(--ease);
+    transition:opacity 1.2s var(--ease),transform 1.2s var(--ease);
 }
 
-.pause-line.visible{
-    opacity:1;
-    transform:translateY(0);
-}
+.pause-line.visible{opacity:1;transform:translateY(0)}
 
 .pause-main{
     font-family:var(--serif);
@@ -950,23 +652,12 @@ section{
     margin-top:60px;
 }
 
-/* =========================================================
-   SCENE 11 — CONFESSION
-========================================================= */
-
+/* SCENE 11 CONFESSION */
 .confession{
-    background:
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(143,38,53,.17),
-            transparent 43%
-        ),
-        #050405;
+    background:radial-gradient(circle at 50% 50%,rgba(143,38,53,.17),transparent 43%),#050405;
 }
 
-.confession-inner{
-    text-align:center;
-}
+.confession-inner{text-align:center}
 
 .confession-pre{
     font-family:var(--serif);
@@ -1006,18 +697,9 @@ section{
     line-height:2;
 }
 
-/* =========================================================
-   SCENE 12 — WHY I LOVE
-========================================================= */
-
-.reasons{
-    background:#10090b;
-}
-
-.reasons-title{
-    text-align:center;
-    margin-bottom:45px;
-}
+/* SCENE 12 REASONS */
+.reasons{background:#10090b}
+.reasons-title{text-align:center;margin-bottom:45px}
 
 .reasons-title h2{
     font-family:var(--serif);
@@ -1025,10 +707,7 @@ section{
     font-weight:400;
 }
 
-.reason-list{
-    width:min(100%,800px);
-    margin:auto;
-}
+.reason-list{width:min(100%,800px);margin:auto}
 
 .reason{
     padding:27px 0;
@@ -1039,11 +718,7 @@ section{
     align-items:start;
 }
 
-.reason-num{
-    color:var(--gold);
-    font-size:10px;
-    letter-spacing:.15em;
-}
+.reason-num{color:var(--gold);font-size:10px;letter-spacing:.15em}
 
 .reason-text{
     font-family:var(--serif);
@@ -1051,18 +726,9 @@ section{
     line-height:1.45;
 }
 
-/* =========================================================
-   SCENE 13 — ENVELOPE
-========================================================= */
-
-.secret{
-    background:#080607;
-}
-
-.secret-head{
-    text-align:center;
-    margin-bottom:45px;
-}
+/* SCENE 13 ENVELOPE */
+.secret{background:#080607}
+.secret-head{text-align:center;margin-bottom:45px}
 
 .secret-head h2{
     font-family:var(--serif);
@@ -1071,11 +737,7 @@ section{
     font-weight:400;
 }
 
-.envelope-area{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
+.envelope-area{display:flex;flex-direction:column;align-items:center}
 
 .envelope{
     position:relative;
@@ -1099,37 +761,45 @@ section{
     position:absolute;
     inset:0;
     background:
-        linear-gradient(
-            145deg,
-            transparent 49.5%,
-            rgba(199,164,119,.18) 50%,
-            transparent 50.5%
-        ),
-        linear-gradient(
-            215deg,
-            transparent 49.5%,
-            rgba(199,164,119,.18) 50%,
-            transparent 50.5%
-        );
+        linear-gradient(145deg,transparent 49.5%,rgba(199,164,119,.18) 50%,transparent 50.5%),
+        linear-gradient(215deg,transparent 49.5%,rgba(199,164,119,.18) 50%,transparent 50.5%);
 }
 
+/* წერილი დახურულ კონვერტში სრულიად დამალულია */
 .envelope-letter{
     position:absolute;
     z-index:2;
     left:7%;
     right:7%;
-    top:7%;
-    height:88%;
+    bottom:7%;
+    height:auto;
     background:#f8efe5;
     color:#201417;
-    padding:25px;
-    transform:translateY(18%);
-    transition:transform 1s var(--ease);
-    overflow:hidden;
+    padding:28px 24px;
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(25%);
+    pointer-events:none;
+    transition:
+        transform .6s var(--ease),
+        opacity .4s ease,
+        visibility 0s linear .6s;
 }
 
+/* გახსნისას: ჯერ ფარცელი იხსნება, მერე გამოდის წერილი (სრული ტექსტით) */
 .envelope.open .envelope-letter{
-    transform:translateY(-18%);
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+    transition:
+        transform 1s var(--ease) .5s,
+        opacity .6s ease .5s,
+        visibility 0s linear .5s;
+}
+
+.envelope-area{
+    transition:padding-top .8s var(--ease);
 }
 
 .envelope-letter p{
@@ -1153,6 +823,7 @@ section{
 
 .envelope.open .envelope-flap{
     transform:rotateX(180deg);
+    z-index:1;
 }
 
 .envelope-seal{
@@ -1175,9 +846,7 @@ section{
     transition:opacity .5s ease;
 }
 
-.envelope.open .envelope-seal{
-    opacity:0;
-}
+.envelope.open .envelope-seal{opacity:0}
 
 .envelope-hint{
     margin-top:23px;
@@ -1186,23 +855,12 @@ section{
     letter-spacing:.25em;
 }
 
-/* =========================================================
-   SCENE 14 — QUESTION
-========================================================= */
-
+/* SCENE 14 QUESTION */
 .question-final{
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(143,38,53,.12),
-            transparent 43%
-        ),
-        #070506;
+    background:radial-gradient(circle at center,rgba(143,38,53,.12),transparent 43%),#070506;
 }
 
-.question-final-inner{
-    text-align:center;
-}
+.question-final-inner{text-align:center}
 
 .question-final-small{
     color:var(--gold);
@@ -1237,14 +895,8 @@ section{
     transition:.35s ease;
 }
 
-.final-button:hover{
-    border-color:var(--gold);
-}
-
-.final-button.yes{
-    background:var(--red);
-    border-color:var(--red);
-}
+.final-button:hover{border-color:var(--gold)}
+.final-button.yes{background:var(--red);border-color:var(--red)}
 
 .final-answer{
     max-width:600px;
@@ -1257,23 +909,11 @@ section{
     transition:.9s var(--ease);
 }
 
-.final-answer.show{
-    opacity:1;
-    transform:translateY(0);
-}
+.final-answer.show{opacity:1;transform:translateY(0)}
 
-/* =========================================================
-   SCENE 15 — END
-========================================================= */
-
+/* SCENE 15 END */
 .end{
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(143,38,53,.1),
-            transparent 42%
-        ),
-        #060405;
+    background:radial-gradient(circle at center,rgba(143,38,53,.1),transparent 42%),#060405;
     text-align:center;
 }
 
@@ -1334,72 +974,46 @@ section{
     letter-spacing:.35em;
 }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* CREDIT */
+.site-credit{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:18px 18px calc(18px + env(safe-area-inset-bottom));
+    background:#060405;
+    color:rgba(246,238,229,.35);
+    font-size:10px;
+    letter-spacing:.12em;
+}
 
+.site-credit img{
+    height:20px;
+    width:auto;
+    opacity:.8;
+}
+
+/* RESPONSIVE */
 @media(max-width:600px){
-
-    .section{
-        padding-left:18px;
-        padding-right:18px;
-    }
-
-    .detail-grid{
-        grid-template-columns:1fr;
-    }
-
-    .detail-card{
-        min-height:160px;
-    }
-
-    .detail-card h3{
-        margin-top:45px;
-    }
-
-    .reason{
-        grid-template-columns:42px 1fr;
-    }
-
-    .letter-paper{
-        padding:35px 27px;
-    }
-
-    .envelope-letter p{
-        font-size:11px;
-    }
+    .section{padding-left:18px;padding-right:18px}
+    .detail-grid{grid-template-columns:1fr}
+    .detail-card{min-height:160px}
+    .detail-card h3{margin-top:45px}
+    .reason{grid-template-columns:42px 1fr}
+    .letter-paper{padding:35px 27px}
+    .envelope-letter p{font-size:11px}
 }
 
 @media(min-width:800px){
-
-    .section{
-        padding-left:60px;
-        padding-right:60px;
-    }
-
-    .detail-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .detail-card{
-        min-height:230px;
-        padding:28px;
-    }
-
-    .letter-paper{
-        padding:85px;
-    }
+    .section{padding-left:60px;padding-right:60px}
+    .detail-grid{grid-template-columns:repeat(3,1fr)}
+    .detail-card{min-height:230px;padding:28px}
+    .letter-paper{padding:85px}
 }
 
 @media(prefers-reduced-motion:reduce){
-
-    html{
-        scroll-behavior:auto;
-    }
-
-    *,
-    *::before,
-    *::after{
+    html{scroll-behavior:auto}
+    *,*::before,*::after{
         animation-duration:.01ms !important;
         animation-iteration-count:1 !important;
         transition-duration:.01ms !important;
@@ -1410,17 +1024,14 @@ section{
 
 <body class="locked">
 
-<!-- =======================================================
-     CINEMATIC INTRO
-======================================================= -->
-
+<!-- INTRO -->
 <div id="intro">
 
     <div class="intro-noise"></div>
 
     <div class="intro-scene" data-scene="0">
         <div class="intro-small">ერთი პატარა აღსარება</div>
-        <div class="intro-main">ნინო…</div>
+        <div class="intro-main">ელენე…</div>
     </div>
 
     <div class="intro-scene" data-scene="1">
@@ -1447,25 +1058,16 @@ section{
 
 </div>
 
-<!-- =======================================================
-     AUDIO
-======================================================= -->
+<!-- AUDIO -->
+<audio id="music" src="music.mp3" loop preload="auto" autoplay playsinline></audio>
 
-<audio id="music" src="music.mp3" loop preload="auto"></audio>
-
-<button
-    class="music-control"
-    id="musicControl"
-    aria-label="მუსიკის ჩართვა ან გამორთვა">
+<button class="music-control" id="musicControl" aria-label="მუსიკის ჩართვა ან გამორთვა">
     <span class="music-disc"></span>
 </button>
 
 <main>
 
-<!-- =======================================================
-     SCENE 01
-======================================================= -->
-
+<!-- SCENE 01 -->
 <section class="section hero">
 
     <div class="ambient">
@@ -1475,9 +1077,7 @@ section{
 
     <div class="container hero-content">
 
-        <div class="hero-kicker reveal">
-            დემეტრე × ნინო
-        </div>
+        <div class="hero-kicker reveal">ელენე</div>
 
         <h1 class="hero-title reveal">
             ერთი რამ
@@ -1499,11 +1099,7 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 02 — WHY
-======================================================= -->
-
+<!-- SCENE 02 -->
 <section class="section why">
 
     <div class="ambient">
@@ -1512,25 +1108,15 @@ section{
 
     <div class="container full-text">
 
-        <div class="eyebrow reveal">
-            რატომ ეს ყველაფერი?
-        </div>
+        <div class="eyebrow reveal">რატომ ეს ყველაფერი?</div>
 
-        <div class="line-text dim reveal">
-            შეიძლებოდა უბრალოდ მომეწერა.
-        </div>
+        <div class="line-text dim reveal">შეიძლებოდა უბრალოდ მომეწერა.</div>
 
-        <div class="line-text dim reveal">
-            შეიძლებოდა პირისპირ მეთქვა.
-        </div>
+        <div class="line-text dim reveal">შეიძლებოდა პირისპირ მეთქვა.</div>
 
-        <div class="line-text reveal">
-            შეიძლებოდა ერთი წინადადებით დამესრულებინა.
-        </div>
+        <div class="line-text reveal">შეიძლებოდა ერთი წინადადებით დამესრულებინა.</div>
 
-        <div class="line-text reveal">
-            მაგრამ შენთვის ეს არ მინდოდა.
-        </div>
+        <div class="line-text reveal">მაგრამ შენთვის ეს არ მინდოდა.</div>
 
         <div class="line-text gold-text reveal">
             მინდოდა, ჩემი სათქმელისთვის
@@ -1541,18 +1127,12 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 03 — BEFORE
-======================================================= -->
-
+<!-- SCENE 03 -->
 <section class="section before">
 
     <div class="container before-inner">
 
-        <div class="eyebrow reveal">
-            სანამ შენ გამოჩნდებოდი
-        </div>
+        <div class="eyebrow reveal">სანამ შენ გამოჩნდებოდი</div>
 
         <h2 class="before-title reveal">
             ჩემი დღეები<br>
@@ -1593,18 +1173,12 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 04 — YOU
-======================================================= -->
-
+<!-- SCENE 04 -->
 <section class="section you">
 
     <div class="container">
 
-        <div class="eyebrow center reveal">
-            შემდეგ შენ
-        </div>
+        <div class="eyebrow center reveal">შემდეგ შენ</div>
 
         <h2 class="you-title reveal">
             თავიდან შეიძლება
@@ -1631,20 +1205,14 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 05 — DETAILS
-======================================================= -->
-
+<!-- SCENE 05 -->
 <section class="section details">
 
     <div class="container">
 
         <div class="details-header">
 
-            <div class="eyebrow reveal">
-                პატარა დეტალები
-            </div>
+            <div class="eyebrow reveal">პატარა დეტალები</div>
 
             <h2 class="reveal">
                 შეიძლება ვერ ამჩნევ,
@@ -1720,11 +1288,7 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 06 — WHEN
-======================================================= -->
-
+<!-- SCENE 06 -->
 <section class="section when">
 
     <div class="ambient">
@@ -1734,17 +1298,11 @@ section{
 
     <div class="container when-inner">
 
-        <div class="eyebrow reveal">
-            ერთი კითხვა
-        </div>
+        <div class="eyebrow reveal">ერთი კითხვა</div>
 
-        <h2 class="when-question reveal">
-            იცი, ყველაზე საინტერესო რა არის?
-        </h2>
+        <h2 class="when-question reveal">იცი, ყველაზე საინტერესო რა არის?</h2>
 
-        <button class="pill-button reveal" id="whenButton">
-            რა?
-        </button>
+        <button class="pill-button reveal" id="whenButton">რა?</button>
 
         <div class="when-answer" id="whenAnswer">
             არ ვიცი ზუსტად როდის შემიყვარდი.
@@ -1759,18 +1317,12 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 07 — MOMENTS
-======================================================= -->
-
+<!-- SCENE 07 -->
 <section class="section moments">
 
     <div class="container moments-inner">
 
-        <div class="eyebrow reveal">
-            ათასი პატარა მომენტი
-        </div>
+        <div class="eyebrow reveal">ათასი პატარა მომენტი</div>
 
         <h2 class="moments-title reveal">
             სიყვარული ზოგჯერ<br>
@@ -1786,9 +1338,7 @@ section{
             <div class="moment reveal">ერთი პატარა მოგონება.</div>
             <div class="moment reveal">კიდევ ერთი.</div>
             <div class="moment reveal">და კიდევ ერთი.</div>
-            <div class="moment final reveal">
-                ათასი პატარა მომენტი.
-            </div>
+            <div class="moment final reveal">ათასი პატარა მომენტი.</div>
 
         </div>
 
@@ -1796,18 +1346,12 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 08 — LETTER
-======================================================= -->
-
+<!-- SCENE 08 -->
 <section class="section letter-section">
 
     <div class="container letter-wrapper">
 
-        <div class="eyebrow letter-label reveal">
-            დაუწერელი წერილი
-        </div>
+        <div class="eyebrow letter-label reveal">დაუწერელი წერილი</div>
 
         <article class="letter-paper reveal">
 
@@ -1817,18 +1361,14 @@ section{
                 ვერასდროს მეთქვა.
             </h2>
 
-            <p>
-                ნინო,
-            </p>
+            <p>ელენე,</p>
 
             <p>
                 შეიძლება ყოველთვის ვერ ვამბობ იმას,
                 რასაც ვგრძნობ.
             </p>
 
-            <p>
-                შეიძლება ზოგჯერ სიტყვებს ვერ ვპოულობ.
-            </p>
+            <p>შეიძლება ზოგჯერ სიტყვებს ვერ ვპოულობ.</p>
 
             <p>
                 მაგრამ მინდა იცოდე,
@@ -1862,13 +1402,9 @@ section{
                 არის მხოლოდ ერთი რამ:
             </p>
 
-            <p class="accent">
-                შენ ჩემთვის ძალიან მნიშვნელოვანი ხარ.
-            </p>
+            <p class="accent">შენ ჩემთვის ძალიან მნიშვნელოვანი ხარ.</p>
 
-            <div class="letter-signature">
-                — დემეტრე
-            </div>
+            <div class="letter-signature">— საბა</div>
 
         </article>
 
@@ -1876,80 +1412,41 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 09 — CHOOSE
-======================================================= -->
-
+<!-- SCENE 09 -->
 <section class="section choose">
 
     <div class="container choose-inner">
 
-        <div class="eyebrow reveal">
-            ერთი პატარა თამაში
-        </div>
+        <div class="eyebrow reveal">ერთი პატარა თამაში</div>
 
         <h2 class="choose-title reveal">
             მოდი, რამდენიმე რამ
             ერთად ავირჩიოთ.
         </h2>
 
-        <div class="choice-question reveal">
-            რომელს აირჩევდი?
-        </div>
+        <div class="choice-question reveal">რომელს აირჩევდი?</div>
 
         <div class="choice-buttons reveal">
-
-            <button class="choice"
-                    data-answer="ერთი დიდი მოგონება">
-                ერთი დიდი მოგონება
-            </button>
-
-            <button class="choice"
-                    data-answer="ასი პატარა მომენტი">
-                ასი პატარა მომენტი
-            </button>
-
+            <button class="choice" data-answer="ერთი დიდი მოგონება">ერთი დიდი მოგონება</button>
+            <button class="choice" data-answer="ასი პატარა მომენტი">ასი პატარა მომენტი</button>
         </div>
 
         <div class="choice-result" id="choiceResult"></div>
 
-        <div class="choice-question reveal">
-            რა უფრო მნიშვნელოვანია?
-        </div>
+        <div class="choice-question reveal">რა უფრო მნიშვნელოვანია?</div>
 
         <div class="choice-buttons reveal">
-
-            <button class="choice"
-                    data-answer="სიტყვები">
-                სიტყვები
-            </button>
-
-            <button class="choice"
-                    data-answer="საქმეები">
-                საქმეები
-            </button>
-
+            <button class="choice" data-answer="სიტყვები">სიტყვები</button>
+            <button class="choice" data-answer="საქმეები">საქმეები</button>
         </div>
 
         <div class="choice-result" id="choiceResult2"></div>
 
-        <div class="choice-question reveal">
-            და ბოლოს…
-        </div>
+        <div class="choice-question reveal">და ბოლოს…</div>
 
         <div class="choice-buttons reveal">
-
-            <button class="choice"
-                    data-answer="ერთი დიდი ჟესტი">
-                ერთი დიდი ჟესტი
-            </button>
-
-            <button class="choice"
-                    data-answer="ყოველდღიური პატარა ყურადღება">
-                ყოველდღიური პატარა ყურადღება
-            </button>
-
+            <button class="choice" data-answer="ერთი დიდი ჟესტი">ერთი დიდი ჟესტი</button>
+            <button class="choice" data-answer="ყოველდღიური პატარა ყურადღება">ყოველდღიური პატარა ყურადღება</button>
         </div>
 
         <div class="choice-result" id="choiceResult3"></div>
@@ -1965,44 +1462,26 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 10 — PAUSE
-======================================================= -->
-
+<!-- SCENE 10 -->
 <section class="section pause">
 
     <div class="container pause-inner">
 
-        <div class="eyebrow reveal">
-            ახლა კი
-        </div>
+        <div class="eyebrow reveal">ახლა კი</div>
 
-        <div class="pause-line" data-pause="1">
-            ყველაფერი, რაც აქამდე ნახე…
-        </div>
+        <div class="pause-line" data-pause="1">ყველაფერი, რაც აქამდე ნახე…</div>
 
-        <div class="pause-line" data-pause="2">
-            ერთი მიზეზით გავაკეთე.
-        </div>
+        <div class="pause-line" data-pause="2">ერთი მიზეზით გავაკეთე.</div>
 
-        <div class="pause-line" data-pause="3">
-            იმიტომ, რომ მინდა იცოდე…
-        </div>
+        <div class="pause-line" data-pause="3">იმიტომ, რომ მინდა იცოდე…</div>
 
-        <div class="pause-main reveal">
-            ყველაზე მნიშვნელოვანი.
-        </div>
+        <div class="pause-main reveal">ყველაზე მნიშვნელოვანი.</div>
 
     </div>
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 11 — CONFESSION
-======================================================= -->
-
+<!-- SCENE 11 -->
 <section class="section confession">
 
     <div class="ambient">
@@ -2032,24 +1511,16 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 12 — REASONS
-======================================================= -->
-
+<!-- SCENE 12 -->
 <section class="section reasons">
 
     <div class="container">
 
         <div class="reasons-title">
 
-            <div class="eyebrow reveal">
-                რატომ?
-            </div>
+            <div class="eyebrow reveal">რატომ?</div>
 
-            <h2 class="reveal">
-                იმიტომ, რომ…
-            </h2>
+            <h2 class="reveal">იმიტომ, რომ…</h2>
 
         </div>
 
@@ -2057,44 +1528,32 @@ section{
 
             <div class="reason reveal">
                 <div class="reason-num">01</div>
-                <div class="reason-text">
-                    შენთან შემიძლია ვიყო მე.
-                </div>
+                <div class="reason-text">შენთან შემიძლია ვიყო მე.</div>
             </div>
 
             <div class="reason reveal">
                 <div class="reason-num">02</div>
-                <div class="reason-text">
-                    შენი არსებობა ჩემს დღეებს ცვლის.
-                </div>
+                <div class="reason-text">შენი არსებობა ჩემს დღეებს ცვლის.</div>
             </div>
 
             <div class="reason reveal">
                 <div class="reason-num">03</div>
-                <div class="reason-text">
-                    შენი პატარა დეტალებიც კი მახსოვს.
-                </div>
+                <div class="reason-text">შენი პატარა დეტალებიც კი მახსოვს.</div>
             </div>
 
             <div class="reason reveal">
                 <div class="reason-num">04</div>
-                <div class="reason-text">
-                    შენი ბედნიერება ჩემთვის მნიშვნელოვანია.
-                </div>
+                <div class="reason-text">შენი ბედნიერება ჩემთვის მნიშვნელოვანია.</div>
             </div>
 
             <div class="reason reveal">
                 <div class="reason-num">05</div>
-                <div class="reason-text">
-                    შენთან დაკავშირებული მოგონებები ჩემთვის ძვირფასია.
-                </div>
+                <div class="reason-text">შენთან დაკავშირებული მოგონებები ჩემთვის ძვირფასია.</div>
             </div>
 
             <div class="reason reveal">
                 <div class="reason-num">06</div>
-                <div class="reason-text">
-                    და იმიტომ, რომ უბრალოდ… შენ ხარ.
-                </div>
+                <div class="reason-text">და იმიტომ, რომ უბრალოდ… შენ ხარ.</div>
             </div>
 
         </div>
@@ -2103,20 +1562,14 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 13 — SECRET ENVELOPE
-======================================================= -->
-
+<!-- SCENE 13 -->
 <section class="section secret">
 
     <div class="container">
 
         <div class="secret-head">
 
-            <div class="eyebrow reveal">
-                ბოლოსთვის
-            </div>
+            <div class="eyebrow reveal">ბოლოსთვის</div>
 
             <h2 class="reveal">
                 კიდევ ერთი რამ<br>
@@ -2127,12 +1580,7 @@ section{
 
         <div class="envelope-area reveal">
 
-            <div
-                class="envelope"
-                id="envelope"
-                role="button"
-                tabindex="0"
-                aria-label="კონვერტის გახსნა">
+            <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="კონვერტის გახსნა">
 
                 <div class="envelope-letter">
                     <p>
@@ -2150,7 +1598,7 @@ section{
                         <br><br>
                         <strong>შენ მიყვარხარ.</strong>
                         <br><br>
-                        — დემეტრე
+                        — საბა
                     </p>
                 </div>
 
@@ -2158,15 +1606,11 @@ section{
 
                 <div class="envelope-flap"></div>
 
-                <div class="envelope-seal">
-                    ♥
-                </div>
+                <div class="envelope-seal">♥</div>
 
             </div>
 
-            <div class="envelope-hint" id="envelopeHint">
-                დააჭირე კონვერტს
-            </div>
+            <div class="envelope-hint" id="envelopeHint">დააჭირე კონვერტს</div>
 
         </div>
 
@@ -2174,18 +1618,12 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 14 — FINAL QUESTION
-======================================================= -->
-
+<!-- SCENE 14 -->
 <section class="section question-final">
 
     <div class="container question-final-inner">
 
-        <div class="question-final-small reveal">
-            ახლა მხოლოდ ერთი რამ მინდა გკითხო
-        </div>
+        <div class="question-final-small reveal">ახლა მხოლოდ ერთი რამ მინდა გკითხო</div>
 
         <h2 class="reveal">
             გრძნობ იმ სიყვარულს,
@@ -2193,15 +1631,8 @@ section{
         </h2>
 
         <div class="final-buttons reveal">
-
-            <button class="final-button yes" id="yesButton">
-                კი ♥
-            </button>
-
-            <button class="final-button" id="againButton">
-                კიდევ მინდა წავიკითხო
-            </button>
-
+            <button class="final-button yes" id="yesButton">კი ♥</button>
+            <button class="final-button" id="againButton">კიდევ მინდა წავიკითხო</button>
         </div>
 
         <div class="final-answer" id="finalAnswer"></div>
@@ -2210,18 +1641,12 @@ section{
 
 </section>
 
-
-<!-- =======================================================
-     SCENE 15 — END
-======================================================= -->
-
+<!-- SCENE 15 -->
 <section class="section end">
 
     <div class="container">
 
-        <div class="eyebrow reveal">
-            ჩვენი ისტორია
-        </div>
+        <div class="eyebrow reveal">ჩვენი ისტორია</div>
 
         <h2 class="end-title reveal">
             ზოგი ისტორია
@@ -2242,122 +1667,110 @@ section{
         </div>
 
         <div class="signature reveal">
-            მიყვარხარ.
-            <small>დემეტრე × ნინო</small>
+            მიყვარხარ
+            <small>საბა × ელენე</small>
         </div>
 
     </div>
 
-    <div class="footer">
-        ONE STORY · TWO HEARTS · ONE CHAPTER AT A TIME
-    </div>
+    <div class="footer">ONE STORY · TWO HEARTS · ONE CHAPTER AT A TIME</div>
 
 </section>
 
 </main>
 
-<script>
-/* =========================================================
-   CONFIG
-========================================================= */
+<div class="site-credit">
+    <img src="logo.png" alt="" onerror="this.style.display='none'">
+    <span>შექმნილია დენის მიერ</span>
+</div>
 
+<script>
+/* CONFIG */
 const CONFIG = {
-    boyName: "დემეტრე",
-    girlName: "ნინო",
+    boyName: "საბა",
+    girlName: "ელენე",
     music: "music.mp3",
     introSceneDuration: 2500
 };
 
-
-/* =========================================================
-   HELPERS
-========================================================= */
-
-const $ = selector =>
-    document.querySelector(selector);
-
-const $$ = selector =>
-    [...document.querySelectorAll(selector)];
-
+/* HELPERS */
+const $ = selector => document.querySelector(selector);
+const $$ = selector => [...document.querySelectorAll(selector)];
 
 /* =========================================================
    AUDIO
 ========================================================= */
-
 const music = $("#music");
 const musicControl = $("#musicControl");
 
 let musicStarted = false;
+const unlockEvents = ["pointerdown","touchend","click","keydown"];
 
-async function playMusic(){
-
-    if(musicStarted) return;
-
-    try{
-
-        music.volume = 0.4;
-
-        await music.play();
-
-        musicStarted = true;
-
-        musicControl.classList.add("playing");
-
-    }catch(error){
-
-        /*
-          Browser autoplay restrictions are handled
-          by trying again on the first user interaction.
-        */
-
-    }
+function removeUnlock(){
+    unlockEvents.forEach(e =>
+        document.removeEventListener(e, unlockMusic)
+    );
 }
 
-function toggleMusic(){
+function unlockMusic(){
+    music.muted = false;
+    music.volume = 0.4;
 
-    if(music.paused){
+    music.play()
+        .then(()=>{
+            musicStarted = true;
+            musicControl.classList.add("playing");
+            removeUnlock();
+        })
+        .catch(()=>{});
+}
 
+/* ცდა: მუსიკა მაშინვე იწყება (ბრაუზერის წესების გამო საჭიროების შემთხვევაში ჯერ უხმოდ) */
+function autoStartMusic(){
+    music.volume = 0.4;
+    music.muted = false;
+
+    music.play()
+        .then(()=>{
+            musicStarted = true;
+            musicControl.classList.add("playing");
+            removeUnlock();
+        })
+        .catch(()=>{
+            // ბრაუზერმა ხმით დაუშვა: ვრთავთ უხმოდ და პირველივე შეხებაზე ვუშვებთ ხმას
+            music.muted = true;
+            music.play().catch(()=>{});
+        });
+}
+
+unlockEvents.forEach(e =>
+    document.addEventListener(e, unlockMusic, { passive:true })
+);
+
+function toggleMusic(e){
+    e.stopPropagation();
+
+    if(music.paused || music.muted){
+        music.muted = false;
         music.play()
             .then(()=>{
                 musicStarted = true;
                 musicControl.classList.add("playing");
+                removeUnlock();
             })
             .catch(()=>{});
-
     }else{
-
         music.pause();
         musicControl.classList.remove("playing");
-
+        removeUnlock();
     }
 }
 
-musicControl.addEventListener(
-    "click",
-    toggleMusic
-);
+musicControl.addEventListener("click", toggleMusic);
 
+autoStartMusic();
 
-/* =========================================================
-   FIRST INTERACTION MUSIC
-========================================================= */
-
-document.addEventListener(
-    "pointerdown",
-    ()=>{
-        playMusic();
-    },
-    {
-        once:true,
-        passive:true
-    }
-);
-
-
-/* =========================================================
-   CINEMATIC INTRO
-========================================================= */
-
+/* CINEMATIC INTRO */
 const intro = $("#intro");
 const introScenes = $$(".intro-scene");
 const introProgress = $("#introProgress");
@@ -2371,13 +1784,8 @@ function startIntro(){
         if(index >= introScenes.length){
 
             setTimeout(()=>{
-
                 intro.classList.add("hide");
-
                 document.body.classList.remove("locked");
-
-                playMusic();
-
             },900);
 
             return;
@@ -2408,135 +1816,75 @@ function startIntro(){
     scene();
 }
 
-window.addEventListener(
-    "load",
-    ()=>{
-        setTimeout(startIntro,500);
+window.addEventListener("load", ()=>{
+    setTimeout(startIntro,500);
+});
+
+/* SCROLL REVEAL */
+const revealObserver = new IntersectionObserver(
+    entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+    {
+        threshold:.12,
+        rootMargin:"0px 0px -60px 0px"
     }
 );
 
+$$(".reveal").forEach(element => revealObserver.observe(element));
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealObserver =
-    new IntersectionObserver(
-        entries=>{
-
-            entries.forEach(entry=>{
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("visible");
-
-                }
-
-            });
-
-        },
-        {
-            threshold:.12,
-            rootMargin:"0px 0px -60px 0px"
-        }
-    );
-
-$$(".reveal").forEach(
-    element => revealObserver.observe(element)
-);
-
-
-/* =========================================================
-   DETAIL CARDS
-========================================================= */
-
+/* DETAIL CARDS */
 $$(".detail-card").forEach(card=>{
 
-    card.addEventListener(
-        "click",
-        ()=>{
+    card.addEventListener("click", ()=>{
 
-            $$(".detail-card").forEach(
-                other=>{
-                    if(other !== card){
-                        other.classList.remove("open");
-                    }
-                }
-            );
+        $$(".detail-card").forEach(other=>{
+            if(other !== card){
+                other.classList.remove("open");
+            }
+        });
 
-            card.classList.toggle("open");
+        card.classList.toggle("open");
 
-        }
-    );
+    });
 
 });
 
-
-/* =========================================================
-   WHEN ANSWER
-========================================================= */
-
+/* WHEN ANSWER */
 const whenButton = $("#whenButton");
 const whenAnswer = $("#whenAnswer");
 
-whenButton.addEventListener(
-    "click",
-    ()=>{
+whenButton.addEventListener("click", ()=>{
 
-        const visible =
-            whenAnswer.classList.toggle("show");
+    const visible = whenAnswer.classList.toggle("show");
 
-        whenButton.textContent =
-            visible
-            ? "დამალე"
-            : "რა?";
+    whenButton.textContent = visible ? "დამალე" : "რა?";
 
-    }
+});
+
+/* MOMENTS AUTO EMPHASIS */
+const moments = $$(".moment");
+
+const momentObserver = new IntersectionObserver(
+    entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                moments.forEach(m=>m.classList.remove("active"));
+                entry.target.classList.add("active");
+            }
+        });
+    },
+    { threshold:.7 }
 );
 
+moments.forEach(moment => momentObserver.observe(moment));
 
-/* =========================================================
-   MOMENTS AUTO EMPHASIS
-========================================================= */
-
-const moments =
-    $$(".moment");
-
-const momentObserver =
-    new IntersectionObserver(
-        entries=>{
-
-            entries.forEach(entry=>{
-
-                if(entry.isIntersecting){
-
-                    moments.forEach(
-                        m=>m.classList.remove("active")
-                    );
-
-                    entry.target.classList.add("active");
-
-                }
-
-            });
-
-        },
-        {
-            threshold:.7
-        }
-    );
-
-moments.forEach(
-    moment=>momentObserver.observe(moment)
-);
-
-
-/* =========================================================
-   CHOICE SYSTEM
-========================================================= */
-
-const choiceButtons =
-    $$(".choice");
+/* CHOICE SYSTEM */
+const choiceButtons = $$(".choice");
 
 const choiceResults = [
     $("#choiceResult"),
@@ -2554,142 +1902,94 @@ const choiceMessages = [
 
 choiceButtons.forEach(button=>{
 
-    button.addEventListener(
-        "click",
-        ()=>{
+    button.addEventListener("click", ()=>{
 
-            const group =
-                button.parentElement;
+        const group = button.parentElement;
 
-            group
-                .querySelectorAll(".choice")
-                .forEach(
-                    b=>b.classList.remove("selected")
-                );
+        group.querySelectorAll(".choice")
+            .forEach(b=>b.classList.remove("selected"));
 
-            button.classList.add("selected");
+        button.classList.add("selected");
 
-            const buttons =
-                $$(".choice");
+        let result = null;
 
-            const index =
-                buttons.indexOf(button);
+        if(
+            group.previousElementSibling &&
+            group.previousElementSibling.classList.contains("choice-question")
+        ){
+            const allGroups = $$(".choice-buttons");
+            const groupIndex = allGroups.indexOf(group);
+            result = choiceResults[groupIndex];
+        }
 
-            /*
-              Determine result area based on
-              question order.
-            */
+        if(result){
 
-            const parentQuestion =
-                group.previousElementSibling;
+            result.textContent =
+                choiceMessages[Math.min(choiceCount,choiceMessages.length - 1)];
 
-            let result = null;
+            choiceCount++;
 
-            if(
-                group.previousElementSibling &&
-                group.previousElementSibling.classList.contains("choice-question")
-            ){
-
-                const allGroups =
-                    $$(".choice-buttons");
-
-                const groupIndex =
-                    allGroups.indexOf(group);
-
-                result =
-                    choiceResults[groupIndex];
-            }
-
-            if(result){
-
-                result.textContent =
-                    choiceMessages[
-                        Math.min(choiceCount,choiceMessages.length - 1)
-                    ];
-
-                choiceCount++;
-
-                if(choiceCount >= 3){
-
-                    $("#chooseFinal")
-                        .classList.add("show");
-
-                }
-
+            if(choiceCount >= 3){
+                $("#chooseFinal").classList.add("show");
             }
 
         }
-    );
+
+    });
 
 });
 
+/* PAUSE CINEMATIC SEQUENCE */
+const pauseSection = $(".pause");
+const pauseLines = $$(".pause-line");
 
-/* =========================================================
-   PAUSE CINEMATIC SEQUENCE
-========================================================= */
+const pauseObserver = new IntersectionObserver(
+    entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
 
-const pauseSection =
-    $(".pause");
+                pauseLines.forEach(line=>line.classList.remove("visible"));
 
-const pauseLines =
-    $$(".pause-line");
+                pauseLines.forEach((line,index)=>{
+                    setTimeout(()=>{
+                        line.classList.add("visible");
+                    }, 900 + index * 1300);
+                });
 
-const pauseObserver =
-    new IntersectionObserver(
-        entries=>{
-
-            entries.forEach(entry=>{
-
-                if(entry.isIntersecting){
-
-                    pauseLines.forEach(
-                        line=>{
-                            line.classList.remove("visible");
-                        }
-                    );
-
-                    pauseLines.forEach(
-                        (line,index)=>{
-
-                            setTimeout(
-                                ()=>{
-                                    line.classList.add("visible");
-                                },
-                                900 + index * 1300
-                            );
-
-                        }
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold:.5
-        }
-    );
+            }
+        });
+    },
+    { threshold:.5 }
+);
 
 pauseObserver.observe(pauseSection);
 
+/* ENVELOPE */
+const envelope = $("#envelope");
+const envelopeHint = $("#envelopeHint");
 
-/* =========================================================
-   ENVELOPE
-========================================================= */
+const envelopeArea = $(".envelope-area");
+const envelopeLetter = $(".envelope-letter");
 
-const envelope =
-    $("#envelope");
+/* წერილის ზედა ნაწილისთვის ადგილის გამოთავისუფლება */
+function updateEnvelopeSpace(){
+    if(envelope.classList.contains("open")){
+        const extra = envelopeLetter.offsetHeight - envelope.offsetHeight * 0.93 + 24;
+        envelopeArea.style.paddingTop = Math.max(0, extra) + "px";
+    }else{
+        envelopeArea.style.paddingTop = "0px";
+    }
+}
 
-const envelopeHint =
-    $("#envelopeHint");
+window.addEventListener("resize", updateEnvelopeSpace);
 
 function toggleEnvelope(){
 
     envelope.classList.toggle("open");
 
-    const open =
-        envelope.classList.contains("open");
+    const open = envelope.classList.contains("open");
+
+    updateEnvelopeSpace();
 
     envelopeHint.textContent =
         open
@@ -2698,164 +1998,92 @@ function toggleEnvelope(){
 
 }
 
-envelope.addEventListener(
-    "click",
-    toggleEnvelope
-);
+envelope.addEventListener("click", toggleEnvelope);
 
-envelope.addEventListener(
-    "keydown",
-    event=>{
+envelope.addEventListener("keydown", event=>{
 
-        if(
-            event.key === "Enter" ||
-            event.key === " "
-        ){
-
-            event.preventDefault();
-
-            toggleEnvelope();
-
-        }
-
+    if(event.key === "Enter" || event.key === " "){
+        event.preventDefault();
+        toggleEnvelope();
     }
-);
 
+});
 
-/* =========================================================
-   FINAL QUESTION
-========================================================= */
+/* FINAL QUESTION */
+const finalAnswer = $("#finalAnswer");
 
-const finalAnswer =
-    $("#finalAnswer");
+$("#yesButton").addEventListener("click", ()=>{
 
-$("#yesButton").addEventListener(
-    "click",
-    ()=>{
+    finalAnswer.innerHTML = `
+        მაშინ ეს საიტი თავის საქმეს ასრულებს.
+        <br><br>
+        იმიტომ, რომ ჩემი სათქმელი შენამდე მოვიდა.
+        <br><br>
+        ♥
+    `;
 
-        finalAnswer.innerHTML =
-            `
-            მაშინ ეს საიტი თავის საქმეს ასრულებს.
-            <br><br>
-            იმიტომ, რომ ჩემი სათქმელი შენამდე მოვიდა.
-            <br><br>
-            ♥
-            `;
+    finalAnswer.classList.add("show");
 
-        finalAnswer.classList.add("show");
+});
 
-    }
-);
+$("#againButton").addEventListener("click", ()=>{
 
-$("#againButton").addEventListener(
-    "click",
-    ()=>{
+    finalAnswer.innerHTML = `
+        მაშინ კიდევ ერთხელ გეტყვი.
+        <br><br>
+        <strong>მიყვარხარ.</strong>
+    `;
 
-        finalAnswer.innerHTML =
-            `
-            მაშინ კიდევ ერთხელ გეტყვი.
-            <br><br>
-            <strong>მიყვარხარ.</strong>
-            `;
+    finalAnswer.classList.add("show");
 
-        finalAnswer.classList.add("show");
+});
 
-    }
-);
-
-
-/* =========================================================
-   PARTICLES
-========================================================= */
-
+/* PARTICLES */
 function createParticles(){
 
-    $$(".ambient").forEach(
-        ambient=>{
+    $$(".ambient").forEach(ambient=>{
 
-            for(let i=0;i<10;i++){
+        for(let i=0;i<10;i++){
 
-                const particle =
-                    document.createElement("span");
+            const particle = document.createElement("span");
 
-                particle.className =
-                    "particle";
+            particle.className = "particle";
+            particle.style.left = `${Math.random()*100}%`;
+            particle.style.top = `${Math.random()*100}%`;
+            particle.style.animationDuration = `${5 + Math.random()*8}s`;
+            particle.style.animationDelay = `${Math.random()*6}s`;
 
-                particle.style.left =
-                    `${Math.random()*100}%`;
-
-                particle.style.top =
-                    `${Math.random()*100}%`;
-
-                particle.style.animationDuration =
-                    `${5 + Math.random()*8}s`;
-
-                particle.style.animationDelay =
-                    `${Math.random()*6}s`;
-
-                ambient.appendChild(particle);
-
-            }
+            ambient.appendChild(particle);
 
         }
-    );
+
+    });
 
 }
 
 createParticles();
 
+/* DYNAMIC TITLE */
+document.title = `ერთი რამ უნდა გითხრა — ${CONFIG.boyName} × ${CONFIG.girlName}`;
 
-/* =========================================================
-   DYNAMIC TITLE
-========================================================= */
-
-document.title =
-    `ერთი რამ უნდა გითხრა — ${CONFIG.boyName} × ${CONFIG.girlName}`;
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-const reducedMotion =
-    window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
+/* REDUCED MOTION */
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if(reducedMotion){
-
-    $$(".reveal").forEach(
-        element=>{
-            element.style.transition =
-                "none";
-        }
-    );
-
+    $$(".reveal").forEach(element=>{
+        element.style.transition = "none";
+    });
 }
 
+/* PREVENT HORIZONTAL OVERFLOW */
+window.addEventListener("resize", ()=>{
+    document.body.style.overflowX = "hidden";
+});
 
-/* =========================================================
-   PREVENT HORIZONTAL OVERFLOW
-========================================================= */
-
-window.addEventListener(
-    "resize",
-    ()=>{
-        document.body.style.overflowX = "hidden";
-    }
-);
-
-
-/* =========================================================
-   SAFETY RESET
-========================================================= */
-
-window.addEventListener(
-    "pageshow",
-    ()=>{
-        document.body.classList.remove("locked");
-    }
-);
+/* SAFETY RESET */
+window.addEventListener("pageshow", ()=>{
+    document.body.classList.remove("locked");
+});
 </script>
 
 </body>
